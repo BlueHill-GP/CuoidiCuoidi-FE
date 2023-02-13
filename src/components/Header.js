@@ -1,11 +1,11 @@
 import React from "react";
-import { logo } from "../assets";
+import { logoblack } from "../assets";
 import "../css/Header.css";
 function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <img alt="" src={logo} />
+        <img alt="" src={logoblack} />
         
       </div>
       <ul className="menu">
