@@ -4,7 +4,6 @@ function PostsPage() {
   return (
     <div>
       <div>
-        <h1>postsPage</h1>
         <Posts/>
       </div>
     </div>

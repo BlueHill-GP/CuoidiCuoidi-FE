@@ -1,11 +1,14 @@
-
-import './App.css';
-import PostsPage from './Pages/PostsPage';
-
+import "./App.css";
+import CreatePosts from "./components/CreatePosts";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 function App() {
   return (
     <div className="App">
-      <PostsPage/>
+      <Header />
+      <CreatePosts />
+      {/* <PostsPage/> */}
+      <Footer />
     </div>
   );
 }
