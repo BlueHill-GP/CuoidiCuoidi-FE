@@ -1,8 +1,10 @@
 .header {
   display: flex;
   justify-content: center;
+  height: 150px;
 }
 .logo {
+  margin-top: 40px;
 }
 .menu {
   display: flex;
@@ -17,8 +19,7 @@
   text-decoration: none;
 }
 .search {
- 
-  width: 250px;
+  width: 300px;
   height: 30px;
 }
 .box_Input {
@@ -27,6 +28,7 @@
   border-right: none;
   outline: none;
   height: 24px;
+  width: 80%;
 }
 .search_Button{
   border-radius: 0 10px 10px 0;
@@ -36,6 +38,7 @@
 }
 .search_Button i{
   color: #487BA6;
+  cursor: pointer;
 }
 .header_Auth {
   display: flex;
