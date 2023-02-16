@@ -1,32 +1,38 @@
-import React from "react";
-import {useRef, useState, useEffect} from "react";
-import {faCheck, faTimes,faInfoCircle} from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import axios from "../api/axios"
+
+import { useRef, useState, useEffect } from 'react';
+import {
+    faCheck,
+    faTimes,
+    faInfoCircle,
+} from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Login from "../components/Login"
+import axios from "../api/axios";
 import "../css/Register.css";
 
-const USER_REGEX = /^\[A-z\][A-z0-9-_]{3,23}$/;
+const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+const REGISTER_URL = '/register';
 
 const Register = () => {
-    const REGISTER_URL = "/register";
     const userRef = useRef();
     const errRef = useRef();
-    const [user, setUser] = useState("");
+
+    const [user, setUser] = useState('');
     const [validName, setValidName] = useState(false);
     const [userFocus, setUserFocus] = useState(false);
-    const [pwd, setPwd] = useState("");
+
+    const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
     const [pwdFocus, setPwdFocus] = useState(false);
-    const [matchPwd, setMatchPwd] = useState("");
+
+    const [matchPwd, setMatchPwd] = useState('');
     const [validMatch, setValidMatch] = useState(false);
     const [matchFocus, setMatchFocus] = useState(false);
-    const [errMsg, setErrMsg] = useState("");
-    // eslint-disable-next-line no-unused-vars
+
+    const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
-    // State events
     useEffect(() => {
         userRef.current.focus();
     }, []);
@@ -41,15 +47,16 @@ const Register = () => {
     }, [pwd, matchPwd]);
 
     useEffect(() => {
-        setErrMsg("");
+        setErrMsg('');
     }, [user, pwd, matchPwd]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        // if button enabled with JS hack
         const v1 = USER_REGEX.test(user);
         const v2 = PWD_REGEX.test(pwd);
         if (!v1 || !v2) {
-            setErrMsg("Invalid Entry");
+            setErrMsg('Invalid Entry');
             return;
         }
         try {
@@ -57,28 +64,29 @@ const Register = () => {
                 REGISTER_URL,
                 JSON.stringify({ user, pwd }),
                 {
-                    headers: { "Content-Type": "application/json" },
+                    headers: { 'Content-Type': 'application/json' },
                     withCredentials: true,
                 }
             );
+            // TODO: remove console.logs before deployment
+            console.log(JSON.stringify(response?.data));
             setSuccess(true);
             //clear state and controlled inputs
-            setUser("");
-            setPwd("");
-            setMatchPwd("");
+            setUser('');
+            setPwd('');
+            setMatchPwd('');
         } catch (err) {
             if (!err?.response) {
-                setErrMsg("No Server Response");
+                setErrMsg('No Server Response');
             } else if (err.response?.status === 409) {
-                setErrMsg("Username Taken");
+                setErrMsg('Username Taken');
             } else {
-                setErrMsg("Registration Failed");
+                setErrMsg('Registration Failed');
             }
             errRef.current.focus();
         }
-
-
     };
+
     return (
         <>
             {success ? (
@@ -97,7 +105,7 @@ const Register = () => {
                     <h1>Đăng ký</h1>
                     <form onSubmit={handleSubmit}>
                         <label htmlFor="username">
-                            Tên đầy đủ:
+                            Họ tên:
                             <FontAwesomeIcon
                                 icon={faCheck}
                                 className={validName ? 'valid' : 'hide'}
@@ -133,58 +141,39 @@ const Register = () => {
                             <br />
                             Letters, numbers, underscores, hyphens allowed.
                         </p>
-
                         <label htmlFor="phoneNumber">
                             Số điện thoại:
-                        </label>
-                        <input
-                            type="text"
-                            id="phoneNumber"
-                            pattern="[0-9]*"
-                            maxLength="10"
-                            onChange={
-                                (event) => this.setState({value: event.target.value})
+                            </label>
+                                                 <input
+                                                    type="number"
+                                                    id="phoneNumber"
+                                                    pattern="[0-9]*"
+                                                    maxLength="10"
+                                                />
+                                                {/*<p*/}
+                                                {/*    id="numbernote"*/}
+                                                {/*    // className={numberFocus && !ValidPhoneNumber()? 'instructions' : 'offscreen'}*/}
+                                                {/*>*/}
+                                                {/*    <FontAwesomeIcon icon={faInfoCircle} />*/}
+                                                {/*    Just only 10 number*/}
+                                                {/*</p>*/}
+                                                <label htmlFor="email">
+                                                    Email:
+                                                    <FontAwesomeIcon
+                                                        icon={faCheck}
+                                                        className={validMatch && matchPwd ? 'valid' : 'hide'}
+                                                    />
+                                                    <FontAwesomeIcon
+                                                        icon={faTimes}
+                                                        className={validMatch || !matchPwd ? 'hide' : 'invalid'}
+                                                    />
+                                                </label>
+                                                <input
+                                                    name = "email"
+                                                    type="text"
+                                                    id="email"
 
-                            // onChange={(e) => setMatchPwd(e.target.value)}
-                            // value={matchPwd}
-                            }
-
-                            // aria-invalid={validMatch ? 'false' : 'true'}
-                            // aria-describedby="confirmnote"
-                            // onFocus={() => setMatchFocus(true)}
-                            // onBlur={() => setMatchFocus(false)}
-                        />
-                        <p
-                            id="pwdnote"
-                            className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}
-                        >
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            Just only 10 number
-                        </p>
-                        <label htmlFor="email">
-                            Email:
-                            <FontAwesomeIcon
-                                icon={faCheck}
-                                className={validMatch && matchPwd ? 'valid' : 'hide'}
-                            />
-                            <FontAwesomeIcon
-                                icon={faTimes}
-                                className={validMatch || !matchPwd ? 'hide' : 'invalid'}
-                            />
-                        </label>
-                        <input
-                            name = "email"
-                            type="text"
-                            id="email"
-                            placeholder="nhap email cua ban"
-                            // onChange={(e) => setMatchPwd(e.target.value)}
-                            // value={matchPwd}
-                            // required
-                            // aria-invalid={validMatch ? 'false' : 'true'}
-                            // aria-describedby="confirmnote"
-                            // onFocus={() => setMatchFocus(true)}
-                            // onBlur={() => setMatchFocus(false)}
-                        />
+                                                />
                         <label htmlFor="password">
                             Mật khẩu:
                             <FontAwesomeIcon
@@ -224,8 +213,9 @@ const Register = () => {
                             <span aria-label="dollar sign">$</span>{' '}
                             <span aria-label="percent">%</span>
                         </p>
-                        <label htmlFor="email">
-                            Xác nhận mật khẩu:
+
+                        <label htmlFor="confirm_pwd">
+                            xác nhận mật khẩu:
                             <FontAwesomeIcon
                                 icon={faCheck}
                                 className={validMatch && matchPwd ? 'valid' : 'hide'}
@@ -235,7 +225,6 @@ const Register = () => {
                                 className={validMatch || !matchPwd ? 'hide' : 'invalid'}
                             />
                         </label>
-
                         <input
                             type="password"
                             id="confirm_pwd"
@@ -260,14 +249,16 @@ const Register = () => {
                         <button
                             disabled={!validName || !validPwd || !validMatch ? true : false}
                         >
-                            Sign Up
+                            Đăng ký ngay
                         </button>
                     </form>
-                    <br />
-                    <span className="line">
-							<a href="/login">Sign In</a>
-                    </span>
+                    <p>
 
+                        <br />
+                        <span className="line">
+							<a className="lineMove" href="/login">Đăng nhập</a>
+						</span>
+                    </p>
                 </section>
             )}
         </>
@@ -275,5 +266,3 @@ const Register = () => {
 };
 
 export default Register;
-
-
