@@ -9,8 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Login from "../components/Login"
 import axios from "../api/axios";
 import "../css/Register.css";
+import {FormInput} from "./base";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
+const PHONE_REGEX = /^0[0-9]{8,12}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const REGISTER_URL = '/register';
 
@@ -19,8 +21,10 @@ const Register = () => {
     const errRef = useRef();
 
     const [user, setUser] = useState('');
-    const [validName, setValidName] = useState(false);
-    const [userFocus, setUserFocus] = useState(false);
+    const [isNameValid, setIsNameValid] = useState(false);
+
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [isPhoneValid, setIsPhoneValid] = useState(false);
 
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
@@ -33,13 +37,6 @@ const Register = () => {
     const [errMsg, setErrMsg] = useState('');
     const [success, setSuccess] = useState(false);
 
-    useEffect(() => {
-        userRef.current.focus();
-    }, []);
-
-    useEffect(() => {
-        setValidName(USER_REGEX.test(user));
-    }, [user]);
 
     useEffect(() => {
         setValidPwd(PWD_REGEX.test(pwd));
@@ -93,87 +90,85 @@ const Register = () => {
                 <Login />
             ) : (
                 <section >
-                    <p
-                        ref={errRef}
-                        className={errMsg ? 'errmsg' : 'offscreen'}
-                        aria-live="assertive"
-                    >
-                        {errMsg}
-                    </p>
-                    <b> Welcome to Cuoidi Cuoidi</b>
-                    <p> Let us help you enjoy your wedding</p>
-                    <h1>Đăng ký</h1>
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">
-                            Họ tên:
-                            <FontAwesomeIcon
-                                icon={faCheck}
-                                className={validName ? 'valid' : 'hide'}
-                            />
-                            <FontAwesomeIcon
-                                icon={faTimes}
-                                className={validName || !user ? 'hide' : 'invalid'}
-                            />
-                        </label>
-                        <input
-                            type="text"
-                            id="username"
-                            ref={userRef}
-                            autoComplete="off"
-                            onChange={(e) => setUser(e.target.value)}
-                            value={user}
-                            required
-                            aria-invalid={validName ? 'false' : 'true'}
-                            aria-describedby="uidnote"
-                            onFocus={() => setUserFocus(true)}
-                            onBlur={() => setUserFocus(false)}
-                        />
+                    <div className={"form_header"}>
                         <p
-                            id="uidnote"
-                            className={
-                                userFocus && user && !validName ? 'instructions' : 'offscreen'
-                            }
+                            ref={errRef}
+                            className={errMsg ? 'errmsg' : 'offscreen'}
+                            aria-live="assertive"
                         >
-                            <FontAwesomeIcon icon={faInfoCircle} />
-                            4 to 24 characters.
-                            <br />
-                            Must begin with a letter.
-                            <br />
-                            Letters, numbers, underscores, hyphens allowed.
+                            {errMsg}
                         </p>
-                        <label htmlFor="phoneNumber">
-                            Số điện thoại:
-                            </label>
-                                                 <input
-                                                    type="number"
-                                                    id="phoneNumber"
-                                                    pattern="[0-9]*"
-                                                    maxLength="10"
-                                                />
-                                                {/*<p*/}
-                                                {/*    id="numbernote"*/}
-                                                {/*    // className={numberFocus && !ValidPhoneNumber()? 'instructions' : 'offscreen'}*/}
-                                                {/*>*/}
-                                                {/*    <FontAwesomeIcon icon={faInfoCircle} />*/}
-                                                {/*    Just only 10 number*/}
-                                                {/*</p>*/}
-                                                <label htmlFor="email">
-                                                    Email:
-                                                    <FontAwesomeIcon
-                                                        icon={faCheck}
-                                                        className={validMatch && matchPwd ? 'valid' : 'hide'}
-                                                    />
-                                                    <FontAwesomeIcon
-                                                        icon={faTimes}
-                                                        className={validMatch || !matchPwd ? 'hide' : 'invalid'}
-                                                    />
-                                                </label>
-                                                <input
-                                                    name = "email"
-                                                    type="text"
-                                                    id="email"
+                        <h1 className={"form_header_welcome"}> Chào mừng đến Cuoidi Cuoidi</h1>
+                        <p> Hãy tận hưởng đám cưới của bạn</p>
+                        <h1 className={"form_header_register-text"}>Đăng ký</h1>
+                    </div>
 
-                                                />
+                    <form onSubmit={handleSubmit}>
+                        <FormInput
+                            value={user}
+                            label={"Tên đầy đủ"}
+                            type={"text"}
+                            onChange={setUser}
+                            validationMessage={
+                               () =>
+                                <>
+                                    <FontAwesomeIcon icon={faInfoCircle} />
+                                    4 đến 24 ký tự
+                                    <br />
+                                    Phải bắt đầu bằng một chữ cái và không cách
+                                    <br />
+                                    Cho phép chữ cái, số, dấu gạch dưới, dấu gạch nối.
+                                </>
+                            }
+                            isValid={isNameValid}
+                            onValidate={() => {
+                                    setIsNameValid(USER_REGEX.test(user));
+                                }
+                            }
+                        />
+                        <FormInput
+                            value={phoneNumber}
+                            label={"Số điện thoại"}
+                            type={"text"}
+                            onChange={setPhoneNumber}
+                            validationMessage={
+                                () =>
+                                    <>
+                                        <FontAwesomeIcon icon={faInfoCircle} />
+                                        Điền số bắt đầu bằng số 0
+                                        <br />
+                                        Phải là các chữ số
+                                        <br />
+                                        Tối đa 12 chữ số và không được nhập chữ cái hoặc bất cứ ký tự nào khác
+                                    </>
+                            }
+                            isValid={isPhoneValid}
+                            onValidate={() => {
+                                setIsPhoneValid(PHONE_REGEX.test(phoneNumber));
+                            }
+                            }
+                        />
+
+                            <label htmlFor="email">
+                                Email:
+                                <FontAwesomeIcon
+                                    icon={faCheck}
+                                    className={validMatch && matchPwd ? 'valid' : 'hide'}
+                                />
+                                <FontAwesomeIcon
+                                    icon={faTimes}
+                                    className={validMatch || !matchPwd ? 'hide' : 'invalid'}
+                                />
+                            </label>
+                        <div className={"inputForm"}>
+                            <input
+                                name = "email"
+                                type="text"
+                                id="email"
+
+                            />
+                        </div>
+
                         <label htmlFor="password">
                             Mật khẩu:
                             <FontAwesomeIcon
@@ -185,7 +180,8 @@ const Register = () => {
                                 className={validPwd || !pwd ? 'hide' : 'invalid'}
                             />
                         </label>
-                        <input
+                        <div className={"inputForm"}>
+                            <input
                             type="password"
                             id="password"
                             onChange={(e) => setPwd(e.target.value)}
@@ -201,21 +197,21 @@ const Register = () => {
                             className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}
                         >
                             <FontAwesomeIcon icon={faInfoCircle} />
-                            8 to 24 characters.
+                            8 đến 24 ký tự
                             <br />
-                            Must include uppercase and lowercase letters, a number and a
-                            special character.
+                            Phải bao gồm chữ hoa và chữ thường, số và một
+                            ký tự đặc biệt.
                             <br />
-                            Allowed special characters:{' '}
+                            Các ký tự đặc biệt được phép:{' '}
                             <span aria-label="exclamation mark">!</span>{' '}
                             <span aria-label="at symbol">@</span>{' '}
                             <span aria-label="hashtag">#</span>{' '}
                             <span aria-label="dollar sign">$</span>{' '}
                             <span aria-label="percent">%</span>
                         </p>
-
-                        <label htmlFor="confirm_pwd">
-                            xác nhận mật khẩu:
+                        </div>
+                        <label>
+                            Xác nhận mật khẩu:
                             <FontAwesomeIcon
                                 icon={faCheck}
                                 className={validMatch && matchPwd ? 'valid' : 'hide'}
@@ -225,6 +221,8 @@ const Register = () => {
                                 className={validMatch || !matchPwd ? 'hide' : 'invalid'}
                             />
                         </label>
+
+                        <div className={"inputForm"}>
                         <input
                             type="password"
                             id="confirm_pwd"
@@ -245,9 +243,9 @@ const Register = () => {
                             <FontAwesomeIcon icon={faInfoCircle} />
                             Must match the first password input field.
                         </p>
-
+                        </div>
                         <button
-                            disabled={!validName || !validPwd || !validMatch ? true : false}
+                            disabled={!isNameValid || !validPwd || !validMatch ? true : false}
                         >
                             Đăng ký ngay
                         </button>
@@ -255,9 +253,7 @@ const Register = () => {
                     <p>
 
                         <br />
-                        <span className="line">
-							<a className="lineMove" href="/login">Đăng nhập</a>
-						</span>
+                        <span className="line"><a href="/login">Đăng nhập</a></span>
                     </p>
                 </section>
             )}

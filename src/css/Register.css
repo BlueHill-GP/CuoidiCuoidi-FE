@@ -40,26 +40,30 @@ section {
     padding: 1rem;
     background-color: rgba(3, 0, 0, 0.4);
 }
-b{
-    margin-left: 15%;
-    font-size: 40px;
+.form_header {
+    text-align: center;
+    font-size: 1rem;
+    /*color: pink;*/
 }
-p {
-    min-height: 10vh;
-    margin-left: 25%;
+.form_header_welcome {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: pink;
 }
-h1 {
-    margin-left: 40%;
+.form_header_register-text {
+    margin-block: 1rem;
 }
-
 form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
     padding-bottom: 1rem;
+    margin-inline: 1.5rem;
 }
-
+label {
+    margin-top: 1rem;
+}
 a,
 a:visited {
     color: #fff;
@@ -67,14 +71,19 @@ a:visited {
 
 input[type='text'],
 input[type='password'],
-input[type='number'],
-
 textarea {
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
-    padding: 0.25rem;
-    border-radius: 0.5rem;
-
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: transparent 2px solid;
+    /*background-color: aqua;*/
+}
+input[type='text']:focus,
+input[type='password']:focus,
+textarea:focus{
+    border: #ffabb8 solid 2px;
 }
 button{
     background-color: #ffabb8;
@@ -82,9 +91,9 @@ button{
     font-size: 22px;
     padding: 0.25rem;
     border-radius: 0.5rem;
+
 }
 
-label,
 button {
     margin-top: 1rem;
 }
@@ -93,38 +102,43 @@ button {
     padding: 0.5rem;
 }
 
-.instructions {
-    font-size: 0.75rem;
-    border-radius: 0.5rem;
-    background: #000;
-    color: #fff;
-    padding: 0.25rem;
-    position: relative;
-    bottom: -10px;
-}
+/*.instructions {*/
+/*    font-size: 0.75rem;*/
+/*    border-radius: 0.5rem;*/
+/*    background: #000;*/
+/*    color: #fff;*/
+/*    padding: 0.25rem 0.5rem;*/
+/*    position: absolute;*/
+/*    bottom: -10px;*/
+/*    z-index: 100;*/
+/*    left: 150px;*/
+/*    top: 60px;*/
+/*    height: max-content;*/
 
-.instructions > svg {
-    margin-right: 0.25rem;
-}
+/*}*/
 
-.offscreen {
-    position: absolute;
-    left: -9999px;
-}
+/*.instructions > svg {*/
+/*    margin-right: 0.25rem;*/
+/*}*/
 
-.hide {
-    display: none;
-}
+/*.offscreen {*/
+/*    position: absolute;*/
+/*    left: -9999px;*/
+/*}*/
 
-.valid {
-    color: limegreen;
-    margin-left: 0.25rem;
-}
+/*.hide {*/
+/*    display: none;*/
+/*}*/
 
-.invalid {
-    color: red;
-    margin-left: 0.25rem;
-}
+/*.valid {*/
+/*    color: limegreen;*/
+/*    margin-left: 0.25rem;*/
+/*}*/
+
+/*.invalid {*/
+/*    color: red;*/
+/*    margin-left: 0.25rem;*/
+/*}*/
 
 .errmsg {
     background-color: lightpink;
@@ -136,6 +150,40 @@ button {
 
 .line {
     display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #ffabb8;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+
 }
 
+.line:hover {
+    color: black;
+    background-color: blanchedalmond;
+}
+a {
+    text-decoration: none;
 
+}
+
+.line:active {
+    background-color: #ffabb8;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+
+}
+
+.inputForm{
+    position: relative;
+}
+.inputForm input {
+    margin-block: 1rem;
+    width: 100%;
+}

@@ -1,6 +1,5 @@
 import { useRef, useState, useEffect, useContext } from 'react';
 import AuthContext from "../context/AuthProvider";
-
 import axios from "../api/axios";
 const LOGIN_URL = '/auth';
 
@@ -65,18 +64,22 @@ const Login = () => {
                 </section>
             ) : (
                 <section>
-                    <p
-                        ref={errRef}
-                        className={errMsg ? 'errmsg' : 'offscreen'}
-                        aria-live="assertive"
-                    >
-                        {errMsg}
-                    </p>
-                    <b> Welcome to Cuoidi Cuoidi</b>
-                    <p> Let us help you enjoy your wedding</p>
-                    <h1>Đăng nhập</h1>
+                    <div className={"form_header"}>
+                        <p
+                            ref={errRef}
+                            className={errMsg ? 'errmsg' : 'offscreen'}
+                            aria-live="assertive"
+                        >
+                            {errMsg}
+                        </p>
+                        <h1 className={"form_header_welcome"}> Chao mung den Cuoidi Cuoidi</h1>
+                        <p> Hay tan huong dam cuoi cua ban</p>
+                        <h1 className={"form_header_register-text"}>Đăng nhập</h1>
+                    </div>
+
                     <form onSubmit={handleSubmit}>
-                        <label htmlFor="username">Tên đầy đủ:</label>
+                        <label >Tên đầy đủ:</label>
+                        <div className={"inputForm"}>
                         <input
                             type="text"
                             id="username"
@@ -86,8 +89,10 @@ const Login = () => {
                             value={user}
                             required
                         />
+                        </div>
 
                         <label htmlFor="password">Mật khẩu:</label>
+                        <div className={"inputForm"}>
                         <input
                             type="password"
                             id="password"
@@ -95,6 +100,7 @@ const Login = () => {
                             value={pwd}
                             required
                         />
+                        </div>
                         <button>Đăng nhập</button>
                     </form>
                     <p>
@@ -103,6 +109,7 @@ const Login = () => {
 							<a href="/">Đăng ký</a>
 						</span>
                     </p>
+
                 </section>
             )}
         </>
