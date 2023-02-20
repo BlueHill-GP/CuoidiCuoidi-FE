@@ -250,11 +250,12 @@ const Register = () => {
                             Đăng ký ngay
                         </button>
                     </form>
-                    <p>
+                    <br />
+                    <span className="line">
+							<a href="/login">Đăng nhập</a>
+						</span>
 
-                        <br />
-                        <span className="line"><a href="/login">Đăng nhập</a></span>
-                    </p>
+
                 </section>
             )}
         </>
