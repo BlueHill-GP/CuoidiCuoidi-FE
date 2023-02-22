@@ -1,0 +1,79 @@
+.bando {
+    width: 100%;
+    height: 500px;
+}
+
+.container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.text_map {
+    position: absolute;
+    top: 100px;
+    width: 25%;
+    background-color: white;
+}
+
+.text_map p {
+    font-size: 12px;
+}
+
+.title {
+    margin: 50px 0 50px 0;
+}
+
+.content, .buttons, .step {
+    display: flex;
+    gap: 20px;
+}
+
+
+.cicle {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: rgb(75, 75, 240);
+    border-radius: 50%;
+    /* margin-left: 90px; */
+}
+
+.box {
+    padding: 20px 20px 20px 20px;
+    text-align: center;
+}
+
+.imagebox {
+    width: 60%;
+    height: 50%;
+    margin: 0 20% 0 20%;
+}
+
+.buttons {
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.btn {
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    border: solid 2px pink;
+    background-color: white;
+    padding-top: 12px !important;
+    border-radius: 10px;
+}
+
+.buttonnn {
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover {
+    -ms-transform: scale(1.5); 
+    -webkit-transform: scale(1.5); 
+    transform: scale(1.1); 
+    transition: transform .5s ease;
+  }
