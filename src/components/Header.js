@@ -15,8 +15,8 @@ function Header() {
         <li>
           <div className="search">
             <input className="box_Input"></input>
-            <button type="submit" class="search_Button">
-              <i class="fa-solid fa-magnifying-glass"></i>
+            <button type="submit" className="search_Button">
+              <i className="fa-solid fa-magnifying-glass"></i>
             </button>
             
           </div>
@@ -34,7 +34,7 @@ function Header() {
 
       <div className="header_Auth">
         <a href="#" className="signin_Btn">
-          <i class="fa-solid fa-user"></i>
+          <i className="fa-solid fa-user"></i>
           Đăng Nhập
         </a>
         <a href="#" className="signup_Btn">
