@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import "../css/Pots.css";
+import "../assets/css/Pots.css";
 function Posts() {
  
 

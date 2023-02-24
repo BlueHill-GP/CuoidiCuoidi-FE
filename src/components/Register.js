@@ -8,7 +8,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Login from "../components/Login"
 import axios from "../api/axios";
-import "../css/Register.css";
+import "../assets/css/Register.css";
 import {FormInput} from "./base";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;

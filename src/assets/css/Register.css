@@ -14,17 +14,15 @@ html {
 
 body {
     min-height: 100vh;
-    background-image: url("../../src/assets/image/hinhnen.png");
+    background-image: url("../image/hinhnen.png");
     background-repeat: no-repeat;
     background-size: cover;
-
 }
 
 .App {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 17%;
     /*align-items: center;*/
     min-height: 100vh;
     /*padding: 1rem 0.5rem;*/
@@ -61,9 +59,8 @@ form {
     padding-bottom: 1rem;
     margin-inline: 1.5rem;
 }
-label {
-    margin-top: 1rem;
-}
+
+
 a,
 a:visited {
     color: #fff;
