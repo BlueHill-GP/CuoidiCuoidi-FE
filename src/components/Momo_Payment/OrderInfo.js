@@ -1,5 +1,5 @@
 import React from 'react';
-import './OrderInfo.css';
+import '/home/linhanna/IdeaProjects/CuoidiCuoidi-FE/src/assets/css/Momo_Payment.css';
 
 function OrderInfo() {
     return (

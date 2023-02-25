@@ -1,14 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import ProductList from './ProductList';
-import OrderInfo from './OrderInfo';
-import PaymentMethod from './PaymentMethod';
-import './App.css';
+import ProductList from '../components/Momo_Payment/ProductList';
+import OrderInfo from '../components/Momo_Payment/OrderInfo';
+import PaymentMethod from '../components/Momo_Payment/PaymentMethod';
+import '../assets/css/Momo_Payment.css';
 
 function MomoPaymentPage() {
     return (
         <div>
-            <Header />
             <div className="container">
                 <div className="left-column">
                     <ProductList />

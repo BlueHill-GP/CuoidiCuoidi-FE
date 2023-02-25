@@ -1,16 +1,12 @@
 import React from 'react';
-import OrderInfo from './OrderInfo';
-import PaymentMethod from './PaymentMethod';
-import './Thanhtoan.css';
-import './OrderInfo.css';
-import './PaymentMethod.css';
+import OrderInfo from '../Momo_Payment/OrderInfo';
+import PaymentMethod from '../Momo_Payment/PaymentMethod';
+import '/home/linhanna/IdeaProjects/CuoidiCuoidi-FE/src/assets/css/Momo_Payment.css';
 
 function Thanhtoan() {
     return (
         <div>
-            <header>
                 <h1>Thanh toán đơn hàng</h1>
-            </header>
             <div className="container">
                 <div className="row">
                     <div className="col-md-6">

@@ -1,6 +1,5 @@
 import React from 'react';
-import MomoIcon from './momo_icon.png';
-
+import MomoIcon from '/home/linhanna/IdeaProjects/CuoidiCuoidi-FE/src/assets/image/momo_icon.svg'
 function MomoButton() {
     return (
         <button className="momo-button">

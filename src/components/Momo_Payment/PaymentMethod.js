@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import MomoLogo from './momo.png';
-import MomoQRCode from './momo_qrcode.png';
-import MomoButton from './MomoButton';
+import MomoLogo from '/home/linhanna/IdeaProjects/CuoidiCuoidi-FE/src/assets/image/momo_icon.svg';
+import MomoQRCode from '/home/linhanna/IdeaProjects/CuoidiCuoidi-FE/src/assets/image/momo_qrcode.jpeg';
+import MomoButton from '../Momo_Payment/MomoButton';
 
 function PaymentMethod() {
     const [activeOption, setActiveOption] = useState('momo');

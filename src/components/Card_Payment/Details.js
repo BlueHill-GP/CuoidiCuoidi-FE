@@ -42,6 +42,7 @@ export default function Details() {
                     label="User name"
                     variant="filled"
                     className={classes.text}
+                    required
                 />
                 <br/>
                 <TextField
@@ -50,6 +51,7 @@ export default function Details() {
                     multiline
                     rows={4}
                     className={classes.text}
+                    required
                 />
             </CardContent>
         </Card>
