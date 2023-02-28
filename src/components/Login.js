@@ -54,6 +54,7 @@ const Login = () => {
     };
 
     return (
+        <div className={"container-register"}>
         <>
             {success ? (
 
@@ -63,7 +64,7 @@ const Login = () => {
                     <p>{<a href="#">Go to Home</a>}</p>
                 </section>
             ) : (
-                <section>
+                <section className={"register-section"}>
                     <div className={"form_header"}>
                         <p
                             ref={errRef}
@@ -107,12 +108,14 @@ const Login = () => {
                         <br />
                         <span className="line">
 							<a href="/">Đăng ký</a>
-						</span>
+						</span>'
                     </p>
 
                 </section>
+
             )}
         </>
+        </div>
     );
 };
 

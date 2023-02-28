@@ -12,7 +12,7 @@ const FormInput = ({value, type, label, onChange, validationMessage, isValid, on
     // const
     return (
         <>
-            <label>
+            <label className={"register-login-label"}>
                 {label}
                 <FontAwesomeIcon
                     icon={faCheck}

@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 html {
     font-family: 'Nunito', sans-serif;
@@ -12,37 +7,38 @@ html {
     color: #fff;
 }
 
-
-body {
+.container-register {
     min-height: 100vh;
     background-image: url("../image/hinhnen.png");
     background-repeat: no-repeat;
     background-size: cover;
+
+
 }
 
-.App {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /*align-items: center;*/
-    min-height: 100vh;
-    /*padding: 1rem 0.5rem;*/
+.register-login-label{
+
 }
 
-section {
+.register-section {
     width: 100%;
     max-width: 650px;
     min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
     background-color: rgba(3, 0, 0, 0.4);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: #fff;
 }
+
 .form_header {
     text-align: center;
     font-size: 1rem;
-    /*color: pink;*/
 }
 .form_header_welcome {
     font-size: 1.5rem;
@@ -56,7 +52,7 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-grow: 1;
+    flex-grow: 6;
     padding-bottom: 1rem;
     margin-inline: 1.5rem;
 }
@@ -99,44 +95,6 @@ button {
 button {
     padding: 0.5rem;
 }
-
-/*.instructions {*/
-/*    font-size: 0.75rem;*/
-/*    border-radius: 0.5rem;*/
-/*    background: #000;*/
-/*    color: #fff;*/
-/*    padding: 0.25rem 0.5rem;*/
-/*    position: absolute;*/
-/*    bottom: -10px;*/
-/*    z-index: 100;*/
-/*    left: 150px;*/
-/*    top: 60px;*/
-/*    height: max-content;*/
-
-/*}*/
-
-/*.instructions > svg {*/
-/*    margin-right: 0.25rem;*/
-/*}*/
-
-/*.offscreen {*/
-/*    position: absolute;*/
-/*    left: -9999px;*/
-/*}*/
-
-/*.hide {*/
-/*    display: none;*/
-/*}*/
-
-/*.valid {*/
-/*    color: limegreen;*/
-/*    margin-left: 0.25rem;*/
-/*}*/
-
-/*.invalid {*/
-/*    color: red;*/
-/*    margin-left: 0.25rem;*/
-/*}*/
 
 .errmsg {
     background-color: lightpink;
@@ -183,5 +141,5 @@ a {
 }
 .inputForm input {
     margin-block: 1rem;
-    width: 100%;
+    width: 140%;
 }
