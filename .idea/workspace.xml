@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cb8eb299-7aa7-4c46-9216-e81512743d50" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2LR5yGXbEVVVqdjLRdWs3A4MScH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/linhanna/IdeaProjects/CuoidiCuoidi-FE&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/snap/intellij-idea-ultimate/405/plugins/javascript-impl/jsLanguageServicesImpl/external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb8eb299-7aa7-4c46-9216-e81512743d50" name="Changes" comment="" />
+      <created>1675821306656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1675821306656</updated>
+      <workItem from="1675821309823" duration="6650000" />
+      <workItem from="1676013606713" duration="5419000" />
+      <workItem from="1676021347780" duration="553000" />
+      <workItem from="1676039907579" duration="601000" />
+      <workItem from="1676215651732" duration="625000" />
+      <workItem from="1676253197010" duration="259000" />
+      <workItem from="1676253590464" duration="6459000" />
+      <workItem from="1676274030070" duration="3313000" />
+      <workItem from="1676391110951" duration="1752000" />
+      <workItem from="1676423807455" duration="5030000" />
+      <workItem from="1676428857311" duration="142000" />
+      <workItem from="1676429155261" duration="5779000" />
+      <workItem from="1676444754273" duration="677000" />
+      <workItem from="1676445980668" duration="7447000" />
+      <workItem from="1676510673959" duration="3733000" />
+      <workItem from="1676531213412" duration="13682000" />
+      <workItem from="1676605793873" duration="10027000" />
+      <workItem from="1676627239575" duration="1739000" />
+      <workItem from="1676630342398" duration="834000" />
+      <workItem from="1676698978273" duration="4679000" />
+      <workItem from="1676729433605" duration="1093000" />
+      <workItem from="1676860529562" duration="2578000" />
+      <workItem from="1676878594158" duration="1281000" />
+      <workItem from="1676945347285" duration="3122000" />
+      <workItem from="1677028348454" duration="12683000" />
+      <workItem from="1677070708034" duration="611000" />
+      <workItem from="1677138330911" duration="37000" />
+      <workItem from="1677138408419" duration="4671000" />
+      <workItem from="1677225535225" duration="3267000" />
+      <workItem from="1677232202369" duration="615000" />
+      <workItem from="1677285866208" duration="8381000" />
+      <workItem from="1677460707531" duration="6852000" />
+      <workItem from="1677480880718" duration="3944000" />
+      <workItem from="1677547683442" duration="482000" />
+    </task>
+    <task id="LOCAL-00001" summary="update code">
+      <created>1677547946396</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677547946396</updated>
+    </task>
+    <task id="LOCAL-00002" summary="update code">
+      <created>1677547988107</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677547988107</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="update code" />
+    <option name="LAST_COMMIT_MESSAGE" value="update code" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
