@@ -4,6 +4,8 @@ import {
     faCheck,
     faTimes,
     faInfoCircle,
+    faEye,
+    faEyeSlash,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Login from "../components/Login"
@@ -29,6 +31,7 @@ const Register = () => {
     const [pwd, setPwd] = useState('');
     const [validPwd, setValidPwd] = useState(false);
     const [pwdFocus, setPwdFocus] = useState(false);
+    const [showPwd, setShowPwd] = useState(false);
 
     const [matchPwd, setMatchPwd] = useState('');
     const [validMatch, setValidMatch] = useState(false);
@@ -183,7 +186,7 @@ const Register = () => {
                             </label>
                             <div className={"inputForm"}>
                                 <input
-                                type="password"
+                                type={showPwd ? "text" : "password"}
                                 id="password"
                                 onChange={(e) => setPwd(e.target.value)}
                                 value={pwd}
@@ -191,8 +194,10 @@ const Register = () => {
                                 aria-invalid={validPwd ? 'false' : 'true'}
                                 aria-describedby="pwdnote"
                                 onFocus={() => setPwdFocus(true)}
-                                onBlur={() => setPwdFocus(false)}
-                            />
+                                onBlur={() => setPwdFocus(false)}/>
+                                <button className={"btn_eye"} type="button" onClick={() => setShowPwd(!showPwd)}>
+                                    <FontAwesomeIcon icon={showPwd ? faEyeSlash : faEye} />
+                                </button>
                             <p
                                 id="pwdnote"
                                 className={pwdFocus && !validPwd ? 'instructions' : 'offscreen'}
@@ -242,10 +247,10 @@ const Register = () => {
                                 }
                             >
                                 <FontAwesomeIcon icon={faInfoCircle} />
-                                Must match the first password input field.
+                                Phải khớp với trường nhập mật khẩu đầu tiên.
                             </p>
                             </div>
-                            <button
+                            <button className={"btn-login"}
                                 disabled={!isNameValid || !validPwd || !validMatch ? true : false}
                             >
                                 Đăng ký ngay
@@ -254,7 +259,7 @@ const Register = () => {
                         <p>
 
                             <br />
-                            <span className="line"><a href="/login">Đăng nhập</a></span>
+                            <a className="line" href="/login">Đăng nhập</a>
                         </p>
                 </section>
             )}

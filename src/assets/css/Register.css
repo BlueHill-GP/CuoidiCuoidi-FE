@@ -17,23 +17,23 @@ html {
 }
 
 .register-login-label{
-
 }
 
 .register-section {
-    width: 100%;
+    width: 150%;
     max-width: 650px;
     min-height: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: rgba(3, 0, 0, 0.4);
-    margin: 0;
-    padding: 0;
+    /*margin: 0;*/
+    padding: 0px;
     box-sizing: border-box;
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
     color: #fff;
+    margin: 0 150px;
 }
 
 .form_header {
@@ -79,22 +79,27 @@ input[type='password']:focus,
 textarea:focus{
     border: #ffabb8 solid 2px;
 }
-button{
+
+.btn-login {
     background-color: #ffabb8;
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
     padding: 0.25rem;
     border-radius: 0.5rem;
-
 }
-
-button {
+.btn-login{
     margin-top: 1rem;
 }
 
-button {
+/*button {*/
+/*    margin-top: 1rem;*/
+/*}*/
+.btn-login{
     padding: 0.5rem;
 }
+/*button {*/
+/*    padding: 0.5rem;*/
+/*}*/
 
 .errmsg {
     background-color: lightpink;
@@ -141,5 +146,31 @@ a {
 }
 .inputForm input {
     margin-block: 1rem;
-    width: 140%;
+    float: left;
+    width: 400px;
 }
+.btn_eye{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    border: none; /* Bỏ viền */
+    cursor: pointer; /* Biến con trỏ thành kiểu tay */
+    width: 30px;
+    height: 45px;
+    margin: 22px 0 ;
+    right: 0;
+    background: none;
+}
+
+.inputForm input[type="password"] {
+    padding-right: 15px; /* Tạo khoảng cách bên phải để chứa icon */
+}
+
+/*.inputForm button:focus {*/
+/*    outline: none; !* Bỏ viền xung quanh khi focus *!*/
+/*}*/
+
+/*.inputForm button svg {*/
+/*    width: 20px; !* Kích thước của icon *!*/
+/*    height: 20px;*/
+/*    fill: #999; !* Màu sắc của icon *!*/
+/*}*/
+

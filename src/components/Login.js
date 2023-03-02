@@ -102,13 +102,11 @@ const Login = () => {
                             required
                         />
                         </div>
-                        <button>Đăng nhập</button>
+                        <button className={"btn-login"}>Đăng nhập</button>
                     </form>
                     <p>
                         <br />
-                        <span className="line">
-							<a href="/">Đăng ký</a>
-						</span>'
+							<a className="line" href="/">Đăng ký</a>
                     </p>
 
                 </section>
