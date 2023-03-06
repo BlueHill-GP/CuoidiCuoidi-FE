@@ -1,53 +1,8 @@
 import React from 'react';
 import '/home/linhanna/IdeaProjects/CuoidiCuoidi-FE/src/assets/css/Booking.css';
-
-function Sidebar(props) {
-    return (
-        <div className="sidebar">
-            <img className="avatar" src={props.avatarUrl} alt="Avatar" />
-            <h2 className="name">{props.name}</h2>
-            <div className="rating">
-                <div className="stars">★★★★★</div>
-                <div className="count">{props.ratingCount} đánh giá</div>
-            </div>
-            <button className="btn btn-booking">Booking</button>
-            <button className="btn btn-calendar">Calendar</button>
-        </div>
-    );
-}
-
-function PackageDetails(props) {
-    return (
-        <div className="package-details">
-            <h1 className="title">{props.title}</h1>
-            <p className="description">{props.description}</p>
-            <div className="features">
-                <ul>
-                    {props.features.map((feature, index) => (
-                        <li key={index} className="feature">
-                            <i className="fas fa-check"></i>
-                            {feature}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <div className="price">{props.price}đ</div>
-        </div>
-    );
-}
-
-function ActionButtons(props) {
-    return (
-        <div className="action-buttons">
-            <button className="btn btn-accept" onClick={props.onAccept}>
-                Đồng ý
-            </button>
-            <button className="btn btn-wait" onClick={props.onWait}>
-                Đợi
-            </button>
-        </div>
-    );
-}
+import Sidebar from "./Sidebar";
+import PackageDetails from "../Booking/PackageDetails";
+import ActionButtons from "./ActionButtons";
 
 function booking() {
     return (

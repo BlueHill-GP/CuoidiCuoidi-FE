@@ -48,7 +48,7 @@ export default function Success() {
                     color="success"
                     gutterBottom
                 >
-                    <b> Order Confirmed </b>
+                    <b> Xác nhận thanh toán </b>
                 </Typography>
             </CardContent>
         </Card>

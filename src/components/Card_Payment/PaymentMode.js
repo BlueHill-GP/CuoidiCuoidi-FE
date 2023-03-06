@@ -49,7 +49,7 @@ export default function PaymentMode() {
         <Card className={classes.root}>
             <CardContent>
                 <FormControl component="fieldset" className={classes.formControl}>
-                    <FormLabel component="legend">Payment Mode</FormLabel>
+                    <FormLabel component="legend">Chế độ thanh toán</FormLabel>
                     <FormGroup>
                         <FormControlLabel
                             control={
@@ -60,17 +60,17 @@ export default function PaymentMode() {
                                     color="primary"
                                 />
                             }
-                            label="Credit / Debit Card"
+                            label="Thẻ tín dụng / Thẻ ghi nợ"
                         />
                         <FormControlLabel
                             disabled
                             control={
                                 <Checkbox checked={cod} onChange={handleChange} name="cod" />
                             }
-                            label="COD(Cash On Delivery) *"
+                            label="COD (Thu tiền khi nhận hàng) *"
                         />
                     </FormGroup>
-                    <FormHelperText>* Not Available </FormHelperText>
+                    <FormHelperText>* Không hợp lệ </FormHelperText>
                 </FormControl>
             </CardContent>
         </Card>

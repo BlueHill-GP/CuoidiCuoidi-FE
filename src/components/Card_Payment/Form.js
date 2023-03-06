@@ -3,8 +3,7 @@ import Details from "../Card_Payment/Details";
 import PaymentMode from "./PaymentMode";
 import Success from "./Success";
 import PayCard from "./PayCard";
-import Footer from "./Footer";
-import {AppBar, Button, Card, CardContent, Grid, Step, StepLabel, Stepper, Toolbar, Typography} from "@mui/material";
+import {AppBar, Button, Card, CardContent, Grid, Step, StepLabel, Stepper, Typography} from "@mui/material";
 import {makeStyles} from "@mui/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -109,19 +108,11 @@ export default function Form() {
                                     direction="row"
                                     alignItems="center"
                                 >
-                                    <Grid item xs={12}>
+                                    <Grid> item xs={12}>
                                         <AppBar
                                             position="static"
-                                            style={{background: "#2E3B55", alignItems: "center"}}
+                                            style={{background: "lightpink", alignItems: "center"}}
                                         >
-                                            <Toolbar>
-                                                <img
-                                                    src="https://nikhilsahu.me/favicon.png"
-                                                    style={{height: 30}}
-                                                    alt="logo"
-                                                    className={classes.logo}
-                                                />
-                                            </Toolbar>
                                         </AppBar>
                                     </Grid>
                                     <Grid item xs={12}>
@@ -195,7 +186,6 @@ export default function Form() {
                                 </Grid>
                             </CardContent>
                         </Card>
-                        <Footer/>
                     </Grid>
                 </div>
             </Grid>

@@ -163,14 +163,3 @@ a {
 .inputForm input[type="password"] {
     padding-right: 15px; /* Tạo khoảng cách bên phải để chứa icon */
 }
-
-/*.inputForm button:focus {*/
-/*    outline: none; !* Bỏ viền xung quanh khi focus *!*/
-/*}*/
-
-/*.inputForm button svg {*/
-/*    width: 20px; !* Kích thước của icon *!*/
-/*    height: 20px;*/
-/*    fill: #999; !* Màu sắc của icon *!*/
-/*}*/
-

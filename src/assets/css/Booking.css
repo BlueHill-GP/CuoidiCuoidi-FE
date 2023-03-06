@@ -1,19 +1,26 @@
 .booking-page {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
-    font-family: Arial, sans-serif;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*justify-content: center;*/
+    /*align-items: flex-start;*/
+    /*height: 100vh;*/
+    /*font-family: Arial, sans-serif;*/
+    /*width: 100%;*/
+    /*margin: 0 auto;*/
+    /*overflow: hidden;*/
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+/*// Tạo một lưới với 2 cột bằng nhau*/
 }
 
 .sidebar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f7f7f7;
-    width: 33.33%;
-    padding: 2rem;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*background-color: black;*/
+    /*width: 33.33%;*/
+    /*padding: 2rem;*/
+    grid-column: 1;
 }
 
 .avatar {
@@ -72,11 +79,13 @@
 }
 
 .main-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 66.66%;
-    padding: 2rem;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: center;*/
+    /*width: 66.66%;*/
+    /*padding: 2rem;*/
+    /*color: black;*/
+    grid-column: 2;
 }
 
 .package-details {
@@ -155,7 +164,7 @@
     width: 100%;
     margin-top: 20px;
     padding: 20px;
-    background-color: #f2f2f2;
+    background-color: #ffabb8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

@@ -75,7 +75,7 @@ export default class PayCard extends React.Component {
                                 gutterBottom
                                 style={{ textAlign: "center" }}
                             >
-                                Enter Your Card Details
+                                Nhập chi tiết thẻ của bạn
                             </Typography>
                             <Card
                                 number={number}
