@@ -15,6 +15,23 @@ function Posts() {
       });
   }, []);
 
+  // like post
+
+  const [liked, setLiked] = useState(Posts.liked);
+
+  const handleLike = async () => {
+    try {
+      const response = await axios.post(
+        `https://61bc10bdd8542f001782451e.mockapi.io/Posts/${Posts.id}/posts_Like`
+      );
+      const updatedPost = response.data;
+      setLiked(updatedPost.liked);
+      
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="post_Container">
       {data.map((Posts) => (
@@ -22,7 +39,10 @@ function Posts() {
           <div className="post">
             <div className="header_Post">
               <div className="user_Img">
-                <img src="https://notagamer.net/wp-content/uploads/2022/01/maxresdefault-1-1024x576.jpg" alt=""></img>
+                <img
+                  src="https://notagamer.net/wp-content/uploads/2022/01/maxresdefault-1-1024x576.jpg"
+                  alt=""
+                ></img>
               </div>
 
               <p className="user_Name">Nguyen Bui Tai</p>
@@ -41,7 +61,11 @@ function Posts() {
 
             <div className="footer_Post">
               <div>
-                <i className="fa-solid fa-heart"></i>
+                <button onClick={handleLike}>
+                  {liked ? "Unlike" : "Like"}
+                  <i className="fa-solid fa-heart"></i>
+                  <p>{Posts.posts_Like}</p>
+                </button>
               </div>
               <div>
                 <i className="fa-solid fa-ellipsis"></i>
@@ -50,7 +74,6 @@ function Posts() {
           </div>
         </div>
       ))}
-      
     </div>
   );
 }

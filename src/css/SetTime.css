@@ -38,7 +38,7 @@ label {
 }
 
 .search-btn{
-  background-color: #e39797;
+  background-color: var(--main-color);
   color: white;
   padding: 5px 10px;
   border: none;

@@ -14,7 +14,7 @@
 }
 .cooperate {
   padding: 5px 10px 5px 10px;
-  border: 1px solid #e39797;
+  border: 1px solid var(--main-color);
   border-radius: 6px;
   color: #ffffff;
   text-decoration: none;

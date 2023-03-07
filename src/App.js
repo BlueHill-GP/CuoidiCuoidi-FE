@@ -6,16 +6,17 @@ import PostsPage from "./Pages/PostsPage";
 import CreatePP from "./Pages/CreatePP";
 import SetTime from "./components/SetTime";
 import Calendar from "./components/Calendar/SetCalendar";
-
+import Categories from "./components/Categories";
 function App() {
   return (
     <div className="App">
       <Header />
       <SetTime/>
-      <Calendar/>
-      {/* <CreatePP/> */}
+      {/* <Categories/> */}
+      {/* <Calendar/> */}
+      <CreatePP/>
       
-      {/* <PostsPage/> */}
+      <PostsPage/>
       {/* <Footer /> */}
     </div>
   );
