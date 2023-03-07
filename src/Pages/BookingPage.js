@@ -1,5 +1,5 @@
 import React from 'react';
-import Booking from '../components/Booking/booking';
+import Booking from '../components/Booking/index';
 function BookingPage() {
     return (
         <div>

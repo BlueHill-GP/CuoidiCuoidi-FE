@@ -108,7 +108,7 @@ export default function Form() {
                                     direction="row"
                                     alignItems="center"
                                 >
-                                    <Grid> item xs={12}>
+                                    <Grid item xs={12}>
                                         <AppBar
                                             position="static"
                                             style={{background: "lightpink", alignItems: "center"}}
