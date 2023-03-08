@@ -9,9 +9,18 @@ function App() {
                 <h2>Nguyễn Thị Ngọc Linh</h2>
                 <p> Xem thêm đánh giá</p>
                 <p className={"text-rate"}>Rate</p>
-                <p>******</p>
-                <button className="booking-button">Booking</button>
-                <button className="calendar-button">Add to Calendar</button>
+                <div className={"star-rating"}>
+                    <span className={"star"}>*</span>
+                    <span className={"star"}>*</span>
+                    <span className={"star"}>*</span>
+                    <span className={"star"}>*</span>
+                    <span className={"star"}>*</span>
+                    <span className={"star"}>*</span>
+                </div>
+                <div>
+                    <button className="booking-button">Booking</button>
+                    <button className="calendar-button">Add to Calendar</button>
+                </div>
             </div>
             <div className={"service"}>
                 <div  >

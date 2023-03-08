@@ -103,13 +103,13 @@
 }
 /* Service */
 .service {
-    width: 80%;
+    width: 100%;
     display: flex;
     align-items: center;
     /*border: 1px solid #ccc;*/
-    border-radius: 5px;
-    padding: 20px;
-    border-left: 1px solid orange;
+    border-radius: 30px;
+    padding: 40px;
+    border: 3px solid orange;
 
 }
 
@@ -183,6 +183,30 @@
     color: black;
     font-size: 16px;
     cursor: pointer;
+}
+.star-rating {
+    display: inline-block;
+    font-size: 0;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+}
+
+.star-rating .star {
+    display: inline-block;
+    font-size: 20px;
+    color: #FFD700;
+    transition: all 0.2s ease-in-out;
+}
+
+.star-rating:not(:hover) .star {
+    opacity: 0.6;
+}
+
+.star-rating:hover .star {
+    transform: rotate(-15deg) scale(1.3);
+    opacity: 1;
+    color: #FFD700;
 }
 
 .accept-button:hover {
