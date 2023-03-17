@@ -1,6 +1,8 @@
 import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import "../css/Posts.css";
+
 function Posts() {
   const [data, setData] = useState([]);
 

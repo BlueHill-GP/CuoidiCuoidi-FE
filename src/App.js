@@ -1,25 +1,25 @@
-import "./App.css";
-import CreatePosts from "./components/CreatePosts";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import PostsPage from "./Pages/PostsPage";
-import CreatePP from "./Pages/CreatePP";
-import SetTime from "./components/SetTime";
-import Calendar from "./components/Calendar/SetCalendar";
-import Categories from "./components/Categories";
+
+import RegisterPage from "../src/Pages/RegisterPage";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import LoginPage from "../src/Pages/LoginPage";
+import PaymentPage from "../src/Pages/PaymentPage";
+import MomoPaymentPage from "../src/Pages/MomoPaymentPage";
+import BookingPage from "../src/Pages/BookingPage";
 function App() {
-  return (
-    <div className="App">
-      <Header />
-      <SetTime/>
-      {/* <Categories/> */}
-      {/* <Calendar/> */}
-      <CreatePP/>
-      
-      <PostsPage/>
-      {/* <Footer /> */}
-    </div>
-  );
+    return (
+        <main className="App">
+            <Router>
+                <Routes>
+                    <Route path="/" exact element={<RegisterPage />} />
+                    <Route path="/login" element={<LoginPage />} />
+                    <Route path="/Payment" element={<PaymentPage />}  />
+                    <Route path="/momo_Payment" element={<MomoPaymentPage />}  />
+                    <Route path="/booking" element={<BookingPage />}  />
+                </Routes>
+            </Router>
+        </main>
+    );
+
 }
 
 export default App;

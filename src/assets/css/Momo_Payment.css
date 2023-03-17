@@ -1,0 +1,181 @@
+.container {
+    margin-top: 50px;
+}
+
+.order-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.order-info h3 {
+    margin-top: 0;
+}
+
+.don-hang {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tong-tien {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.payment-method {
+    border: 1px solid #ccc;
+}
+.btn-momo {
+    display: block;
+    margin: auto;
+    background-color: #009cde;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-momo:hover {
+    background-color: #0087c0;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0px 1px 5px #ccc;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+/* OrderInfo.css */
+.order-info {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.order-info h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.order-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.order-item span {
+    margin-right: auto;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+/* PaymentMethod.css */
+.payment-method {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.payment-method h2 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.payment-option input {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.payment-option label {
+    margin: 0;
+}
+
+.payment-option:hover {
+    background-color: #f5f5f5;
+}
+
+.payment-option.active {
+    background-color: #009cde;
+    color: #fff;
+}
+
+.payment-option.active:hover {
+    background-color: #0087c0;
+}
+
+.momo-info {
+    display: none;
+    margin-top: 20px;
+}
+
+.momo-info h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.momo-info img {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.momo-info p {
+    margin-bottom: 0;
+}
+
+.momo-button {
+    display: inline-block;
+    background-color: #00a5e6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.momo-button:hover {
+    background-color: #0087c0;
+}
