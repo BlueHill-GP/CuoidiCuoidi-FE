@@ -1,0 +1,11 @@
+.create{
+  
+}
+
+.create_Container{
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  
+}

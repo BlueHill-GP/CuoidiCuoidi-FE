@@ -1,3 +1,4 @@
+
 import RegisterPage from "../src/Pages/RegisterPage";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from "../src/Pages/LoginPage";
@@ -18,6 +19,7 @@ function App() {
             </Router>
         </main>
     );
+
 }
 
 export default App;
