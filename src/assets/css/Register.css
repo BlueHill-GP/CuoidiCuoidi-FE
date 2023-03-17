@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+
+html {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: #fff;
+}
+
+.container-register {
+    min-height: 100vh;
+    background-image: url("../image/hinhnen.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.register-login-label{
+}
+
+.register-section {
+    width: 150%;
+    max-width: 650px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(3, 0, 0, 0.4);
+    /*margin: 0;*/
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: #fff;
+    margin: 0 150px;
+}
+
+.form_header {
+    text-align: center;
+    font-size: 1rem;
+}
+.form_header_welcome {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: pink;
+}
+.form_header_register-text {
+    margin-block: 1rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-grow: 6;
+    padding-bottom: 1rem;
+    margin-inline: 1.5rem;
+}
+
+
+a,
+a:visited {
+    color: #fff;
+}
+
+input[type='text'],
+input[type='password'],
+textarea {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.3rem;
+    outline: none;
+    border: transparent 2px solid;
+    /*background-color: aqua;*/
+}
+input[type='text']:focus,
+input[type='password']:focus,
+textarea:focus{
+    border: #ffabb8 solid 2px;
+}
+
+.btn-login {
+    background-color: #ffabb8;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    padding: 0.25rem;
+    border-radius: 0.5rem;
+}
+.btn-login{
+    margin-top: 1rem;
+}
+
+/*button {*/
+/*    margin-top: 1rem;*/
+/*}*/
+.btn-login{
+    padding: 0.5rem;
+}
+/*button {*/
+/*    padding: 0.5rem;*/
+/*}*/
+
+.errmsg {
+    background-color: lightpink;
+    color: firebrick;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.line {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #ffabb8;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+
+}
+
+.line:hover {
+    color: black;
+    background-color: blanchedalmond;
+}
+a {
+    text-decoration: none;
+
+}
+
+.line:active {
+    background-color: #ffabb8;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+
+}
+
+.inputForm{
+    position: relative;
+}
+.inputForm input {
+    margin-block: 1rem;
+    float: left;
+    width: 400px;
+}
+.btn_eye{
+    position: absolute; /* Tạo vị trí tuyệt đối */
+    border: none; /* Bỏ viền */
+    cursor: pointer; /* Biến con trỏ thành kiểu tay */
+    width: 30px;
+    height: 45px;
+    margin: 22px 0 ;
+    right: 0;
+    background: none;
+}
+
+.inputForm input[type="password"] {
+    padding-right: 15px; /* Tạo khoảng cách bên phải để chứa icon */
+}
